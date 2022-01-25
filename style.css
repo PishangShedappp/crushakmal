@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to top left, #33ccff 0%, #ff99cc 100%);
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.loader-container.fade-out {
+  top: -120%;
+  transition: top 1s ease 0s;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 1rem;
+  color: #3d155f;
+}
+
+.heading span {
+  color: #df678c;
+}
+
+.boxSpec .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 3%;
+}
+
+.boxSpec .box-container .box {
+  flex: 1 1 20rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+.boxSpec .box-container .box .content {
+  background: white;
+  padding: 2rem;
+}
+
+.boxSpec .box-container .box .content h1 {
+  color: red;
+}
+
+.boxSpec .box-container .box .content p {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
+/*Popup 1*/
+.popup-center1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 300px;
+  padding: 30px 20px;
+  background: #e7e7e7;
+  border-radius: 10px;
+  box-sizing: border-box;
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  top: -200%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: opacity 300ms ease-in-out, top 1000ms ease-in-out,
+    transform 1000ms ease-in-out;
+}
+
+/*Popup 1*/
+.popup-center1.active {
+  opacity: 1;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+}
+
+/*Popup 1*/
+.popup-center1 .icon {
+  margin: 5px 0px;
+  width: 60px;
+  height: 60px;
+  border: 4px solid pink;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 55px;
+}
+
+/*Popup 1*/
+.popup-center1 .icon i.fas {
+  font-size: 30px;
+  color: pink;
+}
+
+/*Popup 1*/
+.popup-center1 .description {
+  color: #222;
+  font-size: 20px;
+  padding: 30px;
+}
+
+/*Popup 1*/
+.popup-center1 .okay-btn1 {
+  margin-top: 20px;
+}
+
+/*Popup 1*/
+.popup-center1 .okay-btn1 button {
+  padding: 10px 20px;
+  background: #111;
+  color: #e7e7e7;
+  border: 2px solid #111;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  border-radius: 10px;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+/*Popup 1*/
+.popup-center1 .okay-btn1 button:hover {
+  color: #111;
+  background: #e7e7e7;
+}
+
+/*Popup 2*/
+.popup-center2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 300px;
+  padding: 30px 20px;
+  background: #e7e7e7;
+  border-radius: 10px;
+  box-sizing: border-box;
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  top: -200%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: opacity 300ms ease-in-out, top 1000ms ease-in-out,
+    transform 1000ms ease-in-out;
+}
+
+/*Popup 2*/
+.popup-center2.active {
+  opacity: 1;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+}
+
+/*Popup 2*/
+.popup-center2 .icon {
+  margin: 5px 0px;
+  width: 60px;
+  height: 60px;
+  border: 4px solid pink;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 55px;
+}
+
+/*Popup 2*/
+.popup-center2 .icon i.fas {
+  font-size: 30px;
+  color: pink;
+}
+
+/*Popup 2*/
+.popup-center2 .description {
+  color: #222;
+  font-size: 20px;
+  padding: 25px;
+}
+
+/*Popup 2*/
+.popup-center2 .okay-btn2 {
+  margin-top: 5px;
+}
+
+/*Popup 2*/
+.popup-center2 .okay-btn2 button {
+  padding: 10px 20px;
+  background: #111;
+  color: #e7e7e7;
+  border: 2px solid #111;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  border-radius: 10px;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+/*Popup 2*/
+.popup-center2 .okay-btn2 button:hover {
+  color: #111;
+  background: #e7e7e7;
+}
+
+/*Popup 3*/
+.popup-center3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 300px;
+  padding: 30px 20px;
+  background: #e7e7e7;
+  border-radius: 10px;
+  box-sizing: border-box;
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  top: -200%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: opacity 300ms ease-in-out, top 1000ms ease-in-out,
+    transform 1000ms ease-in-out;
+}
+
+/*Popup 3*/
+.popup-center3.active {
+  opacity: 1;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+}
+
+/*Popup 3*/
+.popup-center3 .icon {
+  margin: 5px 0px;
+  width: 60px;
+  height: 60px;
+  border: 4px solid pink;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 55px;
+}
+
+/*Popup 3*/
+.popup-center3 .icon i.fas {
+  font-size: 30px;
+  color: pink;
+}
+
+/*Popup 3*/
+.popup-center3 .description {
+  color: #222;
+  font-size: 20px;
+  padding: 30px;
+}
+
+/*Popup 3*/
+.popup-center3 .okay-btn3 {
+  margin-top: 20px;
+}
+
+/*Popup 3*/
+.popup-center3 .okay-btn3 button {
+  padding: 10px 20px;
+  background: #111;
+  color: #e7e7e7;
+  border: 2px solid #111;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  border-radius: 10px;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+/*Popup 3*/
+.popup-center3 .okay-btn3 button:hover {
+  color: #111;
+  background: #e7e7e7;
+}
+
+/*Media Queries*/
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .heading {
+    padding: 3rem;
+  }
+
+  .boxSpec .box-container {
+    padding-top: 3%;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 45%;
+  }
+}
